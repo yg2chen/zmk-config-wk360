@@ -3,7 +3,7 @@
 / {
     wk360_layout: wk360_layout {
         compatible = "zmk,physical-layout";
-        display-name = "wk360";
+        display-name = "WK 360 Wireless";
 
         kscan = <&kscan0>;
         transform = <&matrix_transform0>;

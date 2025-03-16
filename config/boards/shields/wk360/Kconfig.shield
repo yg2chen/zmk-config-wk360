@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: MIT
 
 config SHIELD_WK360_LEFT
-    def_bool $(shields_list_contains,wk360_360_left)
+    def_bool $(shields_list_contains,wk360_left)
 
 config SHIELD_WK360_RIGHT
     def_bool $(shields_list_contains,wk360_right)
