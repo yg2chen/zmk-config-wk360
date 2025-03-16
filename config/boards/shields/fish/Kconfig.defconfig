@@ -2,11 +2,11 @@
 # SPDX-License-Identifier: MIT
 
 
-if SHIELD_FISH_LEFT
-# 右親機にしたければ "if SHIELD_FISH_RIGHT" にする
+if SHIELD_WK_KINESIS_360_LEFT
+# 右親機にしたければ "if SHIELD_WK_KINESIS_360_RIGHT" にする
 
 config ZMK_KEYBOARD_NAME
-    default "Fish Keyboard"
+    default "wk_kinesis_360 Keyboard"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
@@ -14,7 +14,7 @@ config ZMK_SPLIT_ROLE_CENTRAL
 endif
 
 
-if SHIELD_FISH_LEFT || SHIELD_FISH_RIGHT
+if SHIELD_WK_KINESIS_360_LEFT || SHIELD_WK_KINESIS_360_RIGHT
 
 config ZMK_SPLIT
     default y
