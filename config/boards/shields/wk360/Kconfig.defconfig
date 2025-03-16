@@ -2,11 +2,11 @@
 # SPDX-License-Identifier: MIT
 
 
-if SHIELD_WK_KINESIS_360_LEFT
-# 右親機にしたければ "if SHIELD_WK_KINESIS_360_RIGHT" にする
+if SHIELD_WKS360_LEFT
+# 右親機にしたければ "if SHIELD_WK_360_RIGHT" にする
 
 config ZMK_KEYBOARD_NAME
-    default "wk_kinesis_360"
+    default "WK 360 Wireless"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
@@ -14,7 +14,7 @@ config ZMK_SPLIT_ROLE_CENTRAL
 endif
 
 
-if SHIELD_WK_KINESIS_360_LEFT || SHIELD_WK_KINESIS_360_RIGHT
+if SHIELD_WK360_LEFT || SHIELD_WK_RIGHT
 
 config ZMK_SPLIT
     default y

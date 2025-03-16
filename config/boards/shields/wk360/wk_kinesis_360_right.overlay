@@ -1,4 +1,4 @@
-#include "wk_kinesis_360.dtsi"
+#include "wk360.dtsi"
 
 &default_transform {
     col-offset = <8>;
