@@ -3,7 +3,6 @@
 
 
 if SHIELD_WK_KINESIS_LEFT
-# 右親機にしたければ "if SHIELD_WK_KINESIS_RIGHT" にする
 
 config ZMK_KEYBOARD_NAME
     default "WK Kinesis Wireless"
