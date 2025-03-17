@@ -23,5 +23,6 @@ include:
     artifact-name: wk_kinesis_left
   - board: nice_nano_v2
     shield: wk_kinesis_right
+    artifact-name: wk_kinesis_right
   - board: nice_nano_v2
     shield: settings_reset

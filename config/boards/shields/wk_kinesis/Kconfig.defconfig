@@ -5,7 +5,7 @@
 if SHIELD_WK_KINESIS_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "WK Kinesis BLE"
+    default "WK 360 Wireless"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
