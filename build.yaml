@@ -14,9 +14,9 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: WK_Kinesis_left
+    shield: wk_kinesis_left
     snippet: studio-rpc-usb-uart
   - board: nice_nano_v2
-    shield: WK_Kinesis_right
+    shield: wk_kinesis_right
   - board: nice_nano_v2
     shield: settings_reset
