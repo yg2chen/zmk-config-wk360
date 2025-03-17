@@ -4,8 +4,7 @@
 / {
     chosen {
         zmk,kscan = &kscan0;
-        // zmk,matrix_transform = &default_transform;
-        zmk,physical-layouts = &wk360_layout;
+        zmk,physical-layouts = &wk_kinesis_layout;
     };
 
     default_transform: keymap_transform_0 {
