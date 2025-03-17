@@ -1,9 +1,9 @@
 #include <physical_layouts.dtsi>
 
 / {
-    wk360_layout: wk360_layout {
+    wk360_layout: wk_kinesis_layout {
         compatible = "zmk,physical-layout";
-        display-name = "WK 360 Wireless";
+        display-name = "WK Kinesis Wireless";
         transform = <&default_transform>;
         keys  //                     w   h    x    y     rot    rx    ry
             = <&key_physical_attrs 100 100  575    0       0     0     0>

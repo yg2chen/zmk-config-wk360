@@ -1,8 +1,8 @@
 # Copyright (c) 2021 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-config SHIELD_WK360_LEFT
-    def_bool $(shields_list_contains,wk360_left)
+config SHIELD_WK_KINESIS_LEFT
+    def_bool $(shields_list_contains,wk_kinesis_left)
 
-config SHIELD_WK360_RIGHT
-    def_bool $(shields_list_contains,wk360_right)
+config SHIELD_WK_KINESIS_RIGHT
+    def_bool $(shields_list_contains,wk_kinesis_right)

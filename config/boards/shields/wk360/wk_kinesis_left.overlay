@@ -1,4 +1,4 @@
-#include "wk360.dtsi"
+#include "wk_kinesis.dtsi"
 
 &kscan0{
     row-gpios
