@@ -77,6 +77,24 @@
             flavor = "balanced";
             quick-tap-ms = <175>;
         };
+
+        moprh_lpara_lt: moprh_lpara_lt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MOPRH_LPARA_LT";
+            bindings = <&kp LEFT_PARENTHESIS>, <&kp LESS_THAN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        morph_rpara_gt: morph_rpara_gt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MORPH_RPARA_GT";
+            bindings = <&kp RIGHT_PARENTHESIS>, <&kp GREATER_THAN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -85,32 +103,32 @@
         qwerty {
             display-name = "Base";
             bindings = <
-&kp EQUAL                   &kp N1          &kp N2         &kp N3          &kp N4           &kp N5                                                                                   &kp N6  &kp N7           &kp N8          &kp N9            &kp N0                  &kp MINUS
-&kp TAB                     &kp Q           &kp W          &kp E           &kp R            &kp T                                                                                    &kp Y   &kp U            &kp I           &kp O             &kp P                   &kp BACKSLASH
-&smart_caps_layer 1 0       &hrm_l LCTRL A  &hrm_l LALT S  &hrm_l LMETA D  &hrm_l LSHIFT F  &kp G                  &kp LCTRL  &kp LEFT_ALT      &kp LEFT_META  &kp RCTRL             &kp H   &hrm_r RSHIFT J  &hrm_r RMETA K  &hrm_r RALT L     &hrm_r RCTRL SEMICOLON  &kp ESCAPE
-&magic_shift LSHIFT LSHIFT  &kp Z           &kp X          &kp C           &kp V            &kp B                             &kp HOME          &kp PAGE_UP                          &kp N   &kp M            &kp COMMA       &kp DOT           &kp FSLH                &magic_shift RSHIFT RSHIFT
-                            &kp GRAVE       &kp SQT        &kp LEFT        &kp RIGHT                &kp BACKSPACE  &kp DEL    &kp END           &kp PAGE_DOWN  &kp ENTER  &kp SPACE          &kp DOWN         &kp UP          &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&kp EQUAL                   &kp N1          &kp N2          &kp N3            &kp N4                &kp N5                                                                                 &kp N6  &kp N7                 &kp N8             &kp N9           &kp N0                  &kp MINUS
+&kp TAB                     &kp Q           &kp W           &kp E             &kp R                 &kp T                                                                                  &kp Y   &kp U                  &kp I              &kp O            &kp P                   &kp BACKSLASH
+&smart_caps_layer 1 0       &hrm_l LCTRL A  &hrm_l LALT S   &hrm_l LMETA D    &hrm_l LSHIFT F       &kp G                  &kp LEFT    &kp RIGHT      &kp UP         &kp DOWN              &kp H   &hrm_r RSHIFT J        &hrm_r RMETA K     &hrm_r RALT L    &hrm_r RCTRL SEMICOLON  &kp SQT
+&magic_shift LSHIFT LSHIFT  &kp Z           &kp X           &kp C             &kp V                 &kp B                              &kp HOME       &kp PAGE_UP                          &kp N   &kp M                  &kp COMMA          &kp DOT          &kp FSLH                &magic_shift RSHIFT RSHIFT
+                            &to 2           &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS          &kp BACKSPACE  &kp ESCAPE  &kp END        &kp PAGE_DOWN  &kp ENTER  &kp SPACE          &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp GRAVE
             >;
         };
 
-        layer_1 {
+        func {
             bindings = <
 &kp F1  &kp F2          &kp F3        &kp F4        &kp F5        &kp F7                                                                      &kp F7  &kp F8           &kp F9             &kp F10     &kp F11           &kp F12
 &trans  &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                                                &trans  &trans           &trans             &trans      &kp PRINTSCREEN   &trans
 &trans  &bt BT_CLR_ALL  &trans        &trans        &trans        &trans                &bootloader  &trans      &trans  &bootloader          &trans  &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &kp C_MUTE  &kp C_PLAY_PAUSE  &trans
 &trans  &trans          &trans        &bt BT_CLR    &trans        &trans                             &trans      &trans                       &trans  &kp C_NEXT       &kp C_PREV         &trans      &trans            &trans
-        &trans          &trans        &to 0         &to 2                       &trans  &trans       &trans      &trans  &trans       &trans          &trans           &trans             &trans      &trans
+        &trans          &trans        &trans        &trans                      &trans  &trans       &trans      &trans  &trans       &trans          &trans           &trans             &trans      &trans
             >;
         };
 
         norman {
             display-name = "Base";
             bindings = <
-&kp EQUAL                   &kp N1          &kp N2         &kp N3          &kp N4           &kp N5                                                                                   &kp N6  &kp N7           &kp N8          &kp N9            &kp N0             &kp MINUS
-&kp TAB                     &kp Q           &kp W          &kp D           &kp F            &kp K                                                                                    &kp J   &kp U            &kp R           &kp L             &kp SEMICOLON      &kp BACKSLASH
-&smart_caps_layer 1 0       &hrm_l LCTRL A  &hrm_l LALT S  &hrm_l LMETA E  &hrm_l LSHIFT T  &kp G                  &kp LCTRL  &kp LEFT_ALT      &kp LEFT_META  &kp RCTRL             &kp Y   &hrm_r RSHIFT N  &hrm_r RMETA I  &hrm_r RALT O     &hrm_r RCTRL H     &kp ESCAPE
-&magic_shift LSHIFT LSHIFT  &kp Z           &kp X          &kp C           &kp V            &kp B                             &kp HOME          &kp PAGE_UP                          &kp P   &kp M            &kp COMMA       &kp DOT           &kp FSLH           &magic_shift RSHIFT RSHIFT
-                            &kp GRAVE       &kp SQT        &kp LEFT        &kp RIGHT                &kp BACKSPACE  &kp DEL    &kp END           &kp PAGE_DOWN  &kp ENTER  &kp SPACE          &kp DOWN         &kp UP          &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&kp EQUAL                   &kp N1          &kp N2          &kp N3            &kp N4                &kp N5                                                                                 &kp N6  &kp N7                 &kp N8             &kp N9           &kp N0          &kp MINUS
+&kp TAB                     &kp Q           &kp W           &kp D             &kp F                 &kp K                                                                                  &kp J   &kp U                  &kp R              &kp L            &kp SEMI        &kp BACKSLASH
+&smart_caps_layer 1 0       &hrm_l LCTRL A  &hrm_l LALT S   &hrm_l LMETA E    &hrm_l LSHIFT T       &kp G                  &kp LEFT    &kp RIGHT      &kp UP         &kp DOWN              &kp Y   &hrm_r RSHIFT N        &hrm_r RMETA I     &hrm_r RALT O    &hrm_r RCTRL H  &kp SQT
+&magic_shift LSHIFT LSHIFT  &kp Z           &kp X           &kp C             &kp V                 &kp B                              &kp HOME       &kp PAGE_UP                          &kp P   &kp M                  &kp COMMA          &kp DOT          &kp FSLH        &magic_shift RSHIFT RSHIFT
+                            &to 0           &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS          &kp BACKSPACE  &kp ESCAPE  &kp END        &kp PAGE_DOWN  &kp ENTER  &kp SPACE          &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp GRAVE
             >;
         };
     };
