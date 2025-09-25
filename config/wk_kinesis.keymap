@@ -103,11 +103,11 @@
         qwerty {
             display-name = "Base";
             bindings = <
-&kp EQUAL                   &kp N1          &kp N2          &kp N3            &kp N4                &kp N5                                                                                 &kp N6  &kp N7                 &kp N8             &kp N9           &kp N0                  &kp MINUS
-&kp TAB                     &kp Q           &kp W           &kp E             &kp R                 &kp T                                                                                  &kp Y   &kp U                  &kp I              &kp O            &kp P                   &kp BACKSLASH
-&smart_caps_layer 1 0       &hrm_l LCTRL A  &hrm_l LALT S   &hrm_l LMETA D    &hrm_l LSHIFT F       &kp G                  &kp LEFT    &kp RIGHT      &kp UP         &kp DOWN              &kp H   &hrm_r RSHIFT J        &hrm_r RMETA K     &hrm_r RALT L    &hrm_r RCTRL SEMICOLON  &kp SQT
-&magic_shift LSHIFT LSHIFT  &kp Z           &kp X           &kp C             &kp V                 &kp B                              &kp HOME       &kp PAGE_UP                          &kp N   &kp M                  &kp COMMA          &kp DOT          &kp FSLH                &magic_shift RSHIFT RSHIFT
-                            &to 2           &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS          &kp BACKSPACE  &kp ESCAPE  &kp END        &kp PAGE_DOWN  &kp ENTER  &kp SPACE          &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp GRAVE
+&kp EQUAL                   &kp N1          &kp N2          &kp N3            &kp N4                &kp N5                                                                                &kp N6  &kp N7                 &kp N8             &kp N9           &kp N0                  &kp MINUS
+&kp TAB                     &kp Q           &kp W           &kp E             &kp R                 &kp T                                                                                 &kp Y   &kp U                  &kp I              &kp O            &kp P                   &kp BACKSLASH
+&smart_caps_layer 1 0       &hrm_l LCTRL A  &hrm_l LALT S   &hrm_l LMETA D    &hrm_l LSHIFT F       &kp G                  &kp UP     &kp DOWN      &kp LEFT       &kp RIGHT              &kp H   &hrm_r RSHIFT J        &hrm_r RMETA K     &hrm_r RALT L    &hrm_r RCTRL SEMICOLON  &kp SQT
+&magic_shift LSHIFT LSHIFT  &kp Z           &kp X           &kp C             &kp V                 &kp B                             &kp HOME      &kp PAGE_UP                           &kp N   &kp M                  &kp COMMA          &kp DOT          &kp FSLH                &magic_shift RSHIFT RSHIFT
+                            &to 2           &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS          &kp BACKSPACE  &kp ENTER  &kp END       &kp PAGE_DOWN  &kp ESCAPE  &kp SPACE          &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp GRAVE
             >;
         };
 
