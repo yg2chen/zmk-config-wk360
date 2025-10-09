@@ -25,7 +25,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <265>;
+            tapping-term-ms = <270>;
             quick-tap-ms = <150>;
             require-prior-idle-ms = <150>;
             flavor = "balanced";
@@ -39,7 +39,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <265>;
+            tapping-term-ms = <270>;
             quick-tap-ms = <150>;
             require-prior-idle-ms = <150>;
             flavor = "balanced";
@@ -95,6 +95,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        bs_del: bs_del {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BS_DEL";
+            bindings = <&kp BACKSPACE>, <&kp DEL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -103,11 +112,11 @@
         qwerty {
             display-name = "Base";
             bindings = <
-&kp EQUAL                   &kp N1          &kp N2         &kp N3          &kp N4           &kp N5                                                                                &kp N6  &kp N7           &kp N8          &kp N9            &kp N0                  &kp MINUS
-&kp TAB                     &kp Q           &kp W          &kp E           &kp R            &kp T                                                                                 &kp Y   &kp U            &kp I           &kp O             &kp P                   &kp BACKSLASH
-&smart_caps_layer 1 0       &hrm_l LCTRL A  &hrm_l LALT S  &hrm_l LMETA D  &hrm_l LSHIFT F  &kp G                  &kp LCTRL   &kp LALT      &kp LMETA      &kp RCTRL             &kp H   &hrm_r RSHIFT J  &hrm_r RMETA K  &hrm_r RALT L     &hrm_r RCTRL SEMICOLON  &kp SQT
-&magic_shift LSHIFT LSHIFT  &kp Z           &kp X          &kp C           &kp V            &kp B                              &kp HOME      &kp PAGE_UP                          &kp N   &kp M            &kp COMMA       &kp DOT           &kp FSLH                &magic_shift RSHIFT RSHIFT
-                            &to 2           &kp GRAVE      &kp LEFT        &kp RIGHT                &kp BACKSPACE  &kp ESCAPE  &kp END       &kp PAGE_DOWN  &kp ENTER  &kp SPACE          &kp UP           &kp DOWN        &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&kp EQUAL                   &kp N1  &kp N2     &kp N3    &kp N4     &kp N5                                                                          &kp N6  &kp N7  &kp N8     &kp N9            &kp N0             &kp MINUS
+&kp TAB                     &kp Q   &kp W      &kp E     &kp R      &kp T                                                                           &kp Y   &kp U   &kp I      &kp O             &kp P              &kp BACKSLASH
+&smart_caps_layer 1 0       &kp A   &kp S      &kp D     &kp F      &kp G            &kp LCTRL   &kp LALT      &kp LMETA      &kp RCTRL             &kp H   &kp J   &kp K      &kp L             &kp SEMICOLON      &kp SQT
+&magic_shift LSHIFT LSHIFT  &kp Z   &kp X      &kp C     &kp V      &kp B                        &kp HOME      &kp PAGE_UP                          &kp N   &kp M   &kp COMMA  &kp DOT           &kp FSLH           &magic_shift RSHIFT RSHIFT
+                            &to 2   &kp GRAVE  &kp LEFT  &kp RIGHT          &bs_del  &kp ESCAPE  &kp END       &kp PAGE_DOWN  &kp ENTER  &kp SPACE          &kp UP  &kp DOWN   &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
         };
 
