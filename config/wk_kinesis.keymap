@@ -105,9 +105,9 @@
             bindings = <
 &kp EQUAL                   &kp N1          &kp N2         &kp N3          &kp N4           &kp N5                                                                                &kp N6  &kp N7           &kp N8          &kp N9            &kp N0                  &kp MINUS
 &kp TAB                     &kp Q           &kp W          &kp E           &kp R            &kp T                                                                                 &kp Y   &kp U            &kp I           &kp O             &kp P                   &kp BACKSLASH
-&smart_caps_layer 1 0       &hrm_l LCTRL A  &hrm_l LALT S  &hrm_l LMETA D  &hrm_l LSHIFT F  &kp G              &kp LCTRL   &kp LALT      &kp LMETA      &kp RCTRL                 &kp H   &hrm_r RSHIFT J  &hrm_r RMETA K  &hrm_r RALT L     &hrm_r RCTRL SEMICOLON  &kp SQT
-&magic_shift LSHIFT LSHIFT  &kp Z           &kp X          &kp C           &kp V            &kp B                          &kp HOME      &kp PAGE_UP                              &kp N   &kp M            &kp COMMA       &kp DOT           &kp FSLH                &magic_shift RSHIFT RSHIFT
-                            &to 2           &kp GRAVE      &kp LEFT        &kp RIGHT                &kp SPACE  &kp ESCAPE  &kp END       &kp PAGE_DOWN  &kp ENTER  &kp BACKSPACE          &kp UP           &kp DOWN        &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&smart_caps_layer 1 0       &hrm_l LCTRL A  &hrm_l LALT S  &hrm_l LMETA D  &hrm_l LSHIFT F  &kp G                  &kp LCTRL   &kp LALT      &kp LMETA      &kp RCTRL             &kp H   &hrm_r RSHIFT J  &hrm_r RMETA K  &hrm_r RALT L     &hrm_r RCTRL SEMICOLON  &kp SQT
+&magic_shift LSHIFT LSHIFT  &kp Z           &kp X          &kp C           &kp V            &kp B                              &kp HOME      &kp PAGE_UP                          &kp N   &kp M            &kp COMMA       &kp DOT           &kp FSLH                &magic_shift RSHIFT RSHIFT
+                            &to 2           &kp GRAVE      &kp LEFT        &kp RIGHT                &kp BACKSPACE  &kp ESCAPE  &kp END       &kp PAGE_DOWN  &kp ENTER  &kp SPACE          &kp UP           &kp DOWN        &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
         };
 
