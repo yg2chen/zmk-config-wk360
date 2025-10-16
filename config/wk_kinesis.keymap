@@ -116,7 +116,7 @@
 &kp TAB                     &kp Q   &kp W             &kp E           &kp R                 &kp T                                                                                 &kp Y   &kp U                  &kp I            &kp O              &kp P          &kp BACKSLASH
 &smart_caps_layer 1 0       &kp A   &kp S             &kp D           &kp F                 &kp G                  &kp LCTRL   &kp LALT      &kp LMETA      &kp RCTRL             &kp H   &kp J                  &kp K            &kp L              &kp SEMICOLON  &kp SQT
 &magic_shift LSHIFT LSHIFT  &kp Z   &kp X             &kp C           &kp V                 &kp B                              &kp HOME      &kp PAGE_UP                          &kp N   &kp M                  &kp COMMA        &kp DOT            &kp FSLH       &magic_shift RSHIFT RSHIFT
-                            &to 2   &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS          &kp BACKSPACE  &kp ESCAPE  &kp END       &kp PAGE_DOWN  &kp ENTER  &kp SPACE          &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp GRAVE
+                            &mo 2   &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS          &kp BACKSPACE  &kp ESCAPE  &kp END       &kp PAGE_DOWN  &kp ENTER  &kp SPACE          &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp GRAVE
             >;
         };
 
