@@ -222,9 +222,9 @@
             mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
-        pdvorak_at_carret: pdvorak_at_carret {
+        pdvorak_at_caret: pdvorak_at_caret {
             compatible = "zmk,behavior-mod-morph";
-            label = "PDVORAK_AT_CARRET";
+            label = "PDVORAK_AT_CARET";
             bindings = <&kp AT_SIGN>, <&kp CARET>;
 
             #binding-cells = <0>;
@@ -243,7 +243,7 @@
         lthumb_hold_tap: lthumb_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "LTHUMB_HOLD_TAP";
-            bindings = <&kp>, <&mo>;
+            bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
             hold-trigger-key-positions = <6 7 18 19 34 35 48 49 64 6 7 8 9 10 11 18 19 20 21 22 23 34 35 36 37 38 39 48 49 50 51 38 39 48 49 50 51 52 53 64 65 66 67>;
@@ -265,7 +265,7 @@
 &kp TAB             &kp Q                  &kp W               &kp E                 &kp R               &kp T                                                                                                           &kp Y            &kp U                &kp I                 &kp O                &kp P                &pdvorak_bslash_hash
 &mo 1               &kp A                  &kp S               &kp D                 &kp F               &kp G                             &kp LCTRL                  &kp LALT      &kp LMETA      &kp RCTRL             &kp H            &kp J                &kp K                 &kp L                &kp SEMICOLON        &kp MINUS
 &smart_shift        &kp Z                  &kp X               &kp C                 &kp V               &kp B                                                        &kp HOME      &kp PAGE_UP                          &kp N            &kp M                &kp COMMA             &kp DOT              &kp SQT              &kp LSHIFT
-                    &pdvorak_dollar_tilde  &kp BACKSLASH       &kp LEFT              &kp RIGHT                              &kp BACKSPACE  &lthumb_hold_tap ESCAPE 2  &kp END       &kp PAGE_DOWN  &kp ENTER  &kp SPACE                   &kp DOWN             &kp UP                &kp FSLH             &pdvorak_at_carret
+                    &pdvorak_dollar_tilde  &kp BACKSLASH       &kp LEFT              &kp RIGHT                              &kp BACKSPACE  &lthumb_hold_tap 2 ESCAPE  &kp END       &kp PAGE_DOWN  &kp ENTER  &kp SPACE                   &kp DOWN             &kp UP                &kp FSLH             &pdvorak_at_caret
             >;
         };
 
