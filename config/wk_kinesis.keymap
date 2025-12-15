@@ -2,92 +2,281 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/rgb.h>
+
+&sk {
+    release-after-ms = <900>;
+    quick-release;
+};
 
 / {
     behaviors {
-        hm: homerow_mods {
+        smart_shift: smart_shift {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SMART_SHIFT";
+            bindings = <&magic_shift LEFT_SHIFT LEFT_SHIFT>, <&caps_word>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
+        };
+
+        hrm_l: hrm_l {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
+            label = "HRM_L";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <270>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <150>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 34 35 36 37 38 39 48 49 50 51 52 66 67 38 39 48 49 50 51 52 53 66 67 64 65>;
+        };
+
+        hrm_r: hrm_r {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HRM_R";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <270>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <150>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <0 1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 41 42 43 44 45 0 1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 41 42 43 44 45 12 55 56 57 54>;
+        };
+
+        smart_caps: smart_caps {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SMART_CAPS";
+            #binding-cells = <0>;
+            bindings = <&caps_word>, <&kp CAPSLOCK>;
+
+            tapping-term-ms = <175>;
+        };
+
+        magic_shift: magic_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MAGIC_SHIFT";
+            bindings = <&kp>, <&sk>;
+
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick_tap_ms = <175>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
+            flavor = "balanced";
+            quick-tap-ms = <175>;
+        };
+
+        moprh_lpara_lt: moprh_lpara_lt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MOPRH_LPARA_LT";
+            bindings = <&kp LEFT_PARENTHESIS>, <&kp LESS_THAN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        morph_rpara_gt: morph_rpara_gt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MORPH_RPARA_GT";
+            bindings = <&kp RIGHT_PARENTHESIS>, <&kp GREATER_THAN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        bs_del: bs_del {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BS_DEL";
+            bindings = <&kp BACKSPACE>, <&kp DEL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        pdvorak_plus_one: pdvorak_plus_one {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PDVORAK_PLUS_ONE";
+            bindings = <&kp PLUS>, <&kp N1>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT|MOD_LGUI|MOD_RGUI)>;
+        };
+
+        pdvorak_lbrck_two: pdvorak_lbrck_two {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PDVORAK_LBRCK_TWO";
+            bindings = <&kp LBKT>, <&kp N2>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT|MOD_LGUI|MOD_RGUI)>;
+        };
+
+        pdvorak_lbrce_three: pdvorak_lbrce_three {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PDVORAK_LBRCE_THREE";
+            bindings = <&kp LEFT_BRACE>, <&kp N3>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT|MOD_LGUI|MOD_RGUI)>;
+        };
+
+        pdvorak_lpar_four: pdvorak_lpar_four {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PDVORAK_LPAR_FOUR";
+            bindings = <&kp LEFT_PARENTHESIS>, <&kp N4>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT|MOD_LGUI|MOD_RGUI)>;
+        };
+
+        pdvorak_amp_five: pdvorak_amp_five {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PDVORAK_AMP_FIVE";
+            bindings = <&kp AMPERSAND>, <&kp N5>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT|MOD_LGUI|MOD_RGUI)>;
+        };
+
+        pdvorak_eq_six: pdvorak_eq_six {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PDVORAK_EQ_SIX";
+            bindings = <&kp EQUAL>, <&kp N6>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT|MOD_LGUI|MOD_RGUI)>;
+        };
+
+        pdvorak_rpar_seven: pdvorak_rpar_seven {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PDVORAK_RPAR_SEVEN";
+            bindings = <&kp RIGHT_PARENTHESIS>, <&kp N7>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT|MOD_LGUI|MOD_RGUI)>;
+        };
+
+        pdvorak_rbrce_eight: pdvorak_rbrce_eight {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PDVORAK_RBRCE_EIGHT";
+            bindings = <&kp RIGHT_BRACE>, <&kp N8>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT|MOD_LGUI|MOD_RGUI)>;
+        };
+
+        pdvorak_rbrck_nine: pdvorak_rbrck_nine {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PDVORAK_RBRCK_NINE";
+            bindings = <&kp RBKT>, <&kp N9>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT|MOD_LGUI|MOD_RGUI)>;
+        };
+
+        pdvorak_astrk_zero: pdvorak_astrk_zero {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PDVORAK_ASTRK_ZERO";
+            bindings = <&kp ASTRK>, <&kp N0>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT|MOD_LGUI|MOD_RGUI)>;
+        };
+
+        pdvorak_excl_prct: pdvorak_excl_prct {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PDVORAK_EXCL_PRCT";
+            bindings = <&kp EXCLAMATION>, <&kp PERCENT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT|MOD_LGUI|MOD_RGUI)>;
+        };
+
+        pdvorak_bslash_hash: pdvorak_bslash_hash {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PDVORAK_BSLASH_HASH";
+            bindings = <&kp BACKSLASH>, <&kp POUND>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT|MOD_LGUI|MOD_RGUI)>;
+        };
+
+        pdvorak_pipe_grve: pdvorak_pipe_grve {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PDVORAK_PIPE_GRVE";
+            bindings = <&kp PIPE>, <&kp GRAVE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT|MOD_LGUI|MOD_RGUI)>;
+        };
+
+        pdvorak_at_caret: pdvorak_at_caret {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PDVORAK_AT_CARET";
+            bindings = <&kp AT_SIGN>, <&kp CARET>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT|MOD_LGUI|MOD_RGUI)>;
+        };
+
+        pdvorak_dollar_tilde: pdvorak_dollar_tilde {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PDVORAK_DOLLAR_TILDE";
+            bindings = <&kp DOLLAR>, <&kp TILDE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT|MOD_LGUI|MOD_RGUI)>;
+        };
+
+        lthumb_hold_tap: lthumb_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LTHUMB_HOLD_TAP";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            hold-trigger-key-positions = <6 7 18 19 34 35 48 49 64 6 7 8 9 10 11 18 19 20 21 22 23 34 35 36 37 38 39 48 49 50 51 38 39 48 49 50 51 52 53 64 65 66 67>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <160>;
+            flavor = "balanced";
+            require-prior-idle-ms = <160>;
+            hold-trigger-on-release;
+        };
+
+        esc_mo: esc_mo {
+            compatible = "zmk,behavior-hold-tap";
+            label = "ESC_MO";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <150>;
+            flavor = "balanced";
         };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        qwerty {
             display-name = "Base";
             bindings = <
-&kp ESC    &kp N1     &kp N2    &kp N3        &kp N4  &kp N5                                                                                             &kp N6  &kp N7  &kp N8         &kp N9         &kp N0     &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp E         &kp R   &kp T                                                                                              &kp Y   &kp U   &kp I          &kp O          &kp P      &kp BSLH
-&kp CAPS   &kp A      &kp S     &kp D         &kp F   &kp G                  &kp LEFT_ARROW  &kp RIGHT          &kp UP_ARROW  &kp DOWN_ARROW             &kp H   &kp J   &kp K          &kp L          &kp SEMI   &kp SQT
-&kp LSHFT  &kp Z      &kp X     &kp C         &kp V   &kp B                                  &kp PG_UP          &kp HOME                                 &kp N   &kp M   &kp COMMA      &kp DOT        &kp FSLH   &kp RSHFT
-           &kp LCTRL  &kp LWIN  &kp LEFT_ALT  &mo 1           &kp BACKSPACE  &kp DELETE      &kp PAGE_DOWN      &kp END       &kp ENTER       &kp SPACE          &mo 2   &kp RIGHT_ALT  &kp RIGHT_WIN  &kp RCTRL
+&pdvorak_pipe_grve  &pdvorak_plus_one  &pdvorak_lbrck_two  &pdvorak_lbrce_three  &pdvorak_lpar_four  &pdvorak_amp_five                                                                               &pdvorak_eq_six  &pdvorak_rpar_seven  &pdvorak_rbrce_eight  &pdvorak_rbrck_nine  &pdvorak_astrk_zero    &pdvorak_excl_prct
+&kp TAB             &kp Q              &kp W               &kp E                 &kp R               &kp T                                                                                           &kp Y            &kp U                &kp I                 &kp O                &kp P                  &pdvorak_bslash_hash
+&esc_mo 1 ESCAPE    &kp A              &kp S               &kp D                 &kp F               &kp G                             &kp LCTRL  &kp LALT      &kp LMETA      &kp RCTRL             &kp H            &kp J                &kp K                 &kp L                &kp SEMICOLON          &kp MINUS
+&smart_shift        &kp Z              &kp X               &kp C                 &kp V               &kp B                                        &kp HOME      &kp PAGE_UP                          &kp N            &kp M                &kp COMMA             &kp DOT              &kp SQT                &kp RSHIFT
+                    &pdvorak_at_caret  &kp BACKSLASH       &kp LEFT              &kp RIGHT                              &kp BACKSPACE  &kp DEL    &kp END       &kp PAGE_DOWN  &kp ENTER  &kp SPACE                   &kp DOWN             &kp UP                &kp FSLH             &pdvorak_dollar_tilde
             >;
         };
 
-        layer_1 {
+        func {
             bindings = <
-&kp F1   &kp F2  &kp F3   &kp F4   &kp F5   &kp F7                                                       &kp F7   &kp F8   &kp F9   &kp F10   &kp F11   &kp F12 
-&trans  &trans  &trans  &trans  &trans  &trans                                                      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans      &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans
-            >;
-        };
-
-        layer_2 {
-            bindings = <
-&trans  &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3     &bt BT_SEL 4                                                      &trans           &trans  &trans  &trans  &trans  &trans
-&trans  &trans          &trans        &trans        &rgb_ug RGB_TOG  &trans                                                            &trans           &trans  &trans  &trans  &trans  &trans
-&trans  &bt BT_CLR_ALL  &trans        &trans        &trans           &trans                &trans  &trans      &trans  &trans          &trans           &trans  &trans  &trans  &trans  &trans
-&trans  &trans          &trans        &bt BT_CLR    &trans           &trans                        &trans      &trans                  &rgb_ug RGB_EFF  &trans  &trans  &trans  &trans  &trans
-        &trans          &trans        &trans        &trans                         &trans  &trans  &trans      &trans  &trans  &trans                   &trans  &trans  &trans  &trans
-            >;
-        };
-
-        layer_3 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                                                      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans      &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans
-            >;
-        };
-
-        layer_4 {
-            bindings = <
-&trans  &kp A   &trans  &trans  &trans  &trans                                                      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans      &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans
-            >;
-        };
-
-        layer_5 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                                                      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans      &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans
-            >;
-        };
-
-        layer_6 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                                                      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans      &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans
+&kp F1  &kp F2          &kp F3        &kp F4        &kp F5        &kp F7                                                                      &kp F7  &kp F8           &kp F9             &kp F10     &kp F11           &kp F12
+&trans  &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                                                &trans  &trans           &trans             &trans      &kp PRINTSCREEN   &trans
+&trans  &bt BT_CLR_ALL  &trans        &trans        &trans        &trans                &bootloader  &trans      &trans  &bootloader          &trans  &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &kp C_MUTE  &kp C_PLAY_PAUSE  &trans
+&trans  &trans          &trans        &bt BT_CLR    &trans        &trans                             &trans      &trans                       &trans  &kp C_NEXT       &kp C_PREVIOUS     &trans      &trans            &trans
+        &trans          &trans        &trans        &trans                      &trans  &trans       &trans      &trans  &trans       &trans          &trans           &trans             &trans      &trans
             >;
         };
     };
