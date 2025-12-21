@@ -262,11 +262,11 @@
         qwerty {
             display-name = "Base";
             bindings = <
-&pdvorak_pipe_grve  &pdvorak_plus_one  &pdvorak_lbrck_two  &pdvorak_lbrce_three  &pdvorak_lpar_four  &pdvorak_amp_five                                                                               &pdvorak_eq_six  &pdvorak_rpar_seven  &pdvorak_rbrce_eight  &pdvorak_rbrck_nine  &pdvorak_astrk_zero    &pdvorak_excl_prct
-&kp TAB             &kp Q              &kp W               &kp E                 &kp R               &kp T                                                                                           &kp Y            &kp U                &kp I                 &kp O                &kp P                  &pdvorak_bslash_hash
-&esc_mo 1 ESCAPE    &kp A              &kp S               &kp D                 &kp F               &kp G                             &kp LCTRL  &kp LALT      &kp LMETA      &kp RCTRL             &kp H            &kp J                &kp K                 &kp L                &kp SEMICOLON          &kp MINUS
-&smart_shift        &kp Z              &kp X               &kp C                 &kp V               &kp B                                        &kp HOME      &kp PAGE_UP                          &kp N            &kp M                &kp COMMA             &kp DOT              &kp SQT                &kp RSHIFT
-                    &pdvorak_at_caret  &kp BACKSLASH       &kp LEFT              &kp RIGHT                              &kp BACKSPACE  &kp DEL    &kp END       &kp PAGE_DOWN  &kp ENTER  &kp SPACE                   &kp DOWN             &kp UP                &kp FSLH             &pdvorak_dollar_tilde
+&pdvorak_pipe_grve  &pdvorak_plus_one      &pdvorak_lbrck_two  &pdvorak_lbrce_three  &pdvorak_lpar_four  &pdvorak_amp_five                                                                                            &pdvorak_eq_six  &pdvorak_rpar_seven  &pdvorak_rbrce_eight  &pdvorak_rbrck_nine  &pdvorak_astrk_zero  &pdvorak_excl_prct
+&kp TAB             &kp Q                  &kp W               &kp E                 &kp R               &kp T                                                                                                        &kp Y            &kp U                &kp I                 &kp O                &kp P                &pdvorak_bslash_hash
+&esc_mo 1 ESCAPE    &kp A                  &kp S               &kp D                 &kp F               &kp G                             &kp LCTRL               &kp LALT      &kp LMETA      &kp RCTRL             &kp H            &kp J                &kp K                 &kp L                &kp SEMICOLON        &kp MINUS
+&smart_shift        &kp Z                  &kp X               &kp C                 &kp V               &kp B                                                     &kp HOME      &kp PAGE_UP                          &kp N            &kp M                &kp COMMA             &kp DOT              &kp SLASH            &kp RSHIFT
+                    &pdvorak_dollar_tilde  &kp GRAVE           &kp LEFT              &kp RIGHT                              &kp BACKSPACE  &lthumb_hold_tap 2 DEL  &kp END       &kp PAGE_DOWN  &kp ENTER  &kp SPACE                   &kp DOWN             &kp UP                &kp SQT              &pdvorak_at_caret
             >;
         };
 
@@ -277,6 +277,16 @@
 &trans  &bt BT_CLR_ALL  &trans        &trans        &trans        &trans                &bootloader  &trans      &trans  &bootloader          &trans  &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &kp C_MUTE  &kp C_PLAY_PAUSE  &trans
 &trans  &trans          &trans        &bt BT_CLR    &trans        &trans                             &trans      &trans                       &trans  &kp C_NEXT       &kp C_PREVIOUS     &trans      &trans            &trans
         &trans          &trans        &trans        &trans                      &trans  &trans       &trans      &trans  &trans       &trans          &trans           &trans             &trans      &trans
+            >;
+        };
+
+        num {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                                                             &trans  &trans  &trans  &trans  &kp PLUS      &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                             &trans  &kp N7  &kp N8  &kp N9  &kp MINUS     &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans      &trans  &trans                 &trans  &kp N4  &kp N5  &kp N6  &kp ASTERISK  &kp UNDERSCORE
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                         &trans  &kp N1  &kp N2  &kp N3  &kp SLASH     &trans
+        &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &kp BACKSPACE  &kp N0          &trans  &trans  &trans  &trans
             >;
         };
     };
