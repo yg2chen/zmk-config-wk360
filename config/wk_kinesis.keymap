@@ -100,7 +100,7 @@
             bindings = <&kp PLUS>, <&kp N1>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT|MOD_LGUI|MOD_RGUI)>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
         pdvorak_lbrck_two: pdvorak_lbrck_two {
@@ -109,7 +109,7 @@
             bindings = <&kp LBKT>, <&kp N2>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT|MOD_LGUI|MOD_RGUI)>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
         pdvorak_lbrce_three: pdvorak_lbrce_three {
@@ -118,7 +118,7 @@
             bindings = <&kp LEFT_BRACE>, <&kp N3>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT|MOD_LGUI|MOD_RGUI)>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
         pdvorak_lpar_four: pdvorak_lpar_four {
@@ -127,7 +127,7 @@
             bindings = <&kp LEFT_PARENTHESIS>, <&kp N4>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT|MOD_LGUI|MOD_RGUI)>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
         pdvorak_amp_five: pdvorak_amp_five {
@@ -136,7 +136,7 @@
             bindings = <&kp AMPERSAND>, <&kp N5>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT|MOD_LGUI|MOD_RGUI)>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
         pdvorak_eq_six: pdvorak_eq_six {
@@ -145,7 +145,7 @@
             bindings = <&kp EQUAL>, <&kp N6>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT|MOD_LGUI|MOD_RGUI)>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
         pdvorak_rpar_seven: pdvorak_rpar_seven {
@@ -154,7 +154,7 @@
             bindings = <&kp RIGHT_PARENTHESIS>, <&kp N7>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT|MOD_LGUI|MOD_RGUI)>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
         pdvorak_rbrce_eight: pdvorak_rbrce_eight {
@@ -163,7 +163,7 @@
             bindings = <&kp RIGHT_BRACE>, <&kp N8>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT|MOD_LGUI|MOD_RGUI)>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
         pdvorak_rbrck_nine: pdvorak_rbrck_nine {
@@ -172,7 +172,7 @@
             bindings = <&kp RBKT>, <&kp N9>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT|MOD_LGUI|MOD_RGUI)>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
         pdvorak_astrk_zero: pdvorak_astrk_zero {
@@ -181,7 +181,7 @@
             bindings = <&kp ASTRK>, <&kp N0>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT|MOD_LGUI|MOD_RGUI)>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
         pdvorak_excl_prct: pdvorak_excl_prct {
@@ -190,7 +190,7 @@
             bindings = <&kp EXCLAMATION>, <&kp PERCENT>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT|MOD_LGUI|MOD_RGUI)>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
         pdvorak_bslash_hash: pdvorak_bslash_hash {
@@ -199,7 +199,7 @@
             bindings = <&kp BACKSLASH>, <&kp POUND>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT|MOD_LGUI|MOD_RGUI)>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
         pdvorak_pipe_grve: pdvorak_pipe_grve {
@@ -208,7 +208,7 @@
             bindings = <&kp PIPE>, <&kp GRAVE>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT|MOD_LGUI|MOD_RGUI)>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
         pdvorak_at_caret: pdvorak_at_caret {
@@ -217,7 +217,7 @@
             bindings = <&kp AT_SIGN>, <&kp CARET>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT|MOD_LGUI|MOD_RGUI)>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
         pdvorak_dollar_tilde: pdvorak_dollar_tilde {
@@ -226,7 +226,7 @@
             bindings = <&kp DOLLAR>, <&kp TILDE>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT|MOD_LGUI|MOD_RGUI)>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
         lthumb_hold_tap: lthumb_hold_tap {
@@ -237,9 +237,9 @@
             #binding-cells = <2>;
             hold-trigger-key-positions = <6 7 18 19 34 35 48 49 64 6 7 8 9 10 11 18 19 20 21 22 23 34 35 36 37 38 39 48 49 50 51 38 39 48 49 50 51 52 53 64 65 66 67>;
             tapping-term-ms = <250>;
-            quick-tap-ms = <160>;
+            quick-tap-ms = <150>;
             flavor = "balanced";
-            require-prior-idle-ms = <160>;
+            require-prior-idle-ms = <150>;
             hold-trigger-on-release;
         };
 
@@ -262,10 +262,10 @@
         qwerty {
             display-name = "Base";
             bindings = <
-&pdvorak_pipe_grve  &pdvorak_plus_one      &pdvorak_lbrck_two  &pdvorak_lbrce_three  &pdvorak_lpar_four  &pdvorak_amp_five                                                                                            &pdvorak_eq_six  &pdvorak_rpar_seven  &pdvorak_rbrce_eight  &pdvorak_rbrck_nine  &pdvorak_astrk_zero  &pdvorak_excl_prct
-&kp TAB             &kp Q                  &kp W               &kp E                 &kp R               &kp T                                                                                                        &kp Y            &kp U                &kp I                 &kp O                &kp P                &pdvorak_bslash_hash
-&esc_mo 1 ESCAPE    &kp A                  &kp S               &kp D                 &kp F               &kp G                             &kp LCTRL               &kp LALT      &kp LMETA      &kp RCTRL             &kp H            &kp J                &kp K                 &kp L                &kp SEMICOLON        &kp MINUS
-&smart_shift        &kp Z                  &kp X               &kp C                 &kp V               &kp B                                                     &kp HOME      &kp PAGE_UP                          &kp N            &kp M                &kp COMMA             &kp DOT              &kp SLASH            &kp RSHIFT
+&pdvorak_pipe_grve  &pdvorak_plus_one      &pdvorak_lbrck_two  &pdvorak_lbrce_three  &pdvorak_lpar_four  &pdvorak_amp_five                                                                                            &pdvorak_eq_six  &pdvorak_rpar_seven  &pdvorak_rbrce_eight  &pdvorak_rbrck_nine  &pdvorak_astrk_zero     &pdvorak_excl_prct
+&kp TAB             &kp Q                  &kp W               &kp E                 &kp R               &kp T                                                                                                        &kp Y            &kp U                &kp I                 &kp O                &kp P                   &pdvorak_bslash_hash
+&esc_mo 1 ESCAPE    &hrm_l LCTRL A         &hrm_l LALT S       &hrm_l LMETA D        &hrm_l LSHIFT F     &kp G                             &kp LCTRL               &kp LALT      &kp LMETA      &kp RCTRL             &kp H            &hrm_r RSHIFT J      &hrm_r RMETA K        &hrm_r RALT L        &hrm_r RCTRL SEMICOLON  &kp MINUS
+&smart_shift        &kp Z                  &kp X               &kp C                 &kp V               &kp B                                                     &kp HOME      &kp PAGE_UP                          &kp N            &kp M                &kp COMMA             &kp DOT              &kp SLASH               &kp RSHIFT
                     &pdvorak_dollar_tilde  &kp GRAVE           &kp LEFT              &kp RIGHT                              &kp BACKSPACE  &lthumb_hold_tap 2 DEL  &kp END       &kp PAGE_DOWN  &kp ENTER  &kp SPACE                   &kp DOWN             &kp UP                &kp SQT              &pdvorak_at_caret
             >;
         };
