@@ -292,6 +292,26 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        combo_lt {
+            bindings = <&kp LESS_THAN>;
+            key-positions = <2 4>;
+            require-prior-idle-ms = <150>;
+            layers = <0>;
+            timeout-ms = <45>;
+        };
+
+        combo_gt {
+            bindings = <&kp GREATER_THAN>;
+            key-positions = <7 9>;
+            require-prior-idle-ms = <150>;
+            layers = <0>;
+            timeout-ms = <45>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
