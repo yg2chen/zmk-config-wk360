@@ -109,7 +109,7 @@
             bindings = <&kp LBKT>, <&kp N2>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT)>;
+            mods = <(MOD_RSFT|MOD_LSFT|MOD_LALT|MOD_RALT)>;
         };
 
         pdvorak_lbrce_three: pdvorak_lbrce_three {
@@ -118,7 +118,7 @@
             bindings = <&kp LEFT_BRACE>, <&kp N3>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT)>;
+            mods = <(MOD_RSFT|MOD_LSFT|MOD_LALT|MOD_RALT)>;
         };
 
         pdvorak_lpar_four: pdvorak_lpar_four {
@@ -127,7 +127,7 @@
             bindings = <&kp LEFT_PARENTHESIS>, <&kp N4>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT)>;
+            mods = <(MOD_RSFT|MOD_LSFT|MOD_LALT|MOD_RALT)>;
         };
 
         pdvorak_amp_five: pdvorak_amp_five {
@@ -145,7 +145,7 @@
             bindings = <&kp EQUAL>, <&kp N6>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT)>;
+            mods = <(MOD_RSFT|MOD_LSFT|MOD_LALT|MOD_RALT)>;
         };
 
         pdvorak_rpar_seven: pdvorak_rpar_seven {
@@ -154,7 +154,7 @@
             bindings = <&kp RIGHT_PARENTHESIS>, <&kp N7>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT)>;
+            mods = <(MOD_RSFT|MOD_LSFT|MOD_LALT|MOD_RALT)>;
         };
 
         pdvorak_rbrce_eight: pdvorak_rbrce_eight {
@@ -163,7 +163,7 @@
             bindings = <&kp RIGHT_BRACE>, <&kp N8>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT)>;
+            mods = <(MOD_RSFT|MOD_LSFT|MOD_LALT|MOD_RALT)>;
         };
 
         pdvorak_rbrck_nine: pdvorak_rbrck_nine {
@@ -172,7 +172,7 @@
             bindings = <&kp RBKT>, <&kp N9>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT)>;
+            mods = <(MOD_RSFT|MOD_LSFT|MOD_LALT|MOD_RALT)>;
         };
 
         pdvorak_astrk_zero: pdvorak_astrk_zero {
@@ -181,7 +181,7 @@
             bindings = <&kp ASTRK>, <&kp N0>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT)>;
+            mods = <(MOD_RSFT|MOD_LSFT|MOD_LALT|MOD_RALT)>;
         };
 
         pdvorak_excl_prct: pdvorak_excl_prct {
@@ -190,7 +190,7 @@
             bindings = <&kp EXCLAMATION>, <&kp PERCENT>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT)>;
+            mods = <(MOD_RSFT|MOD_LSFT|MOD_LALT|MOD_RALT)>;
         };
 
         pdvorak_bslash_hash: pdvorak_bslash_hash {
@@ -270,7 +270,7 @@
             bindings = <&kp AMPERSAND>, <&kp N1>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT)>;
+            mods = <(MOD_RSFT|MOD_LSFT|MOD_LALT|MOD_RALT)>;
         };
 
         altered_plus_five: altered_plus_five {
@@ -279,7 +279,7 @@
             bindings = <&kp PLUS>, <&kp N5>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT)>;
+            mods = <(MOD_RSFT|MOD_LSFT|MOD_LALT|MOD_RALT)>;
         };
 
         altered_pipe_hash: altered_pipe_hash {
@@ -306,7 +306,7 @@
             bindings = <&kp PIPE>, <&kp TILDE>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT)>;
+            mods = <(MOD_RSFT|MOD_LSFT|MOD_LALT|MOD_RALT)>;
         };
     };
 
